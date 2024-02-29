@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Form</title>
+<style>
+  /* Define your CSS styles here */
+  .hidden {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<div id="defaultContent">
+  <!-- Default content of the contact form -->
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+  
+  <label for="message">Message:</label>
+  <textarea id="message" name="message"></textarea>
+</div>
+
+<div id="externalContent" class="hidden">
+  <!-- External content (e.g., link) -->
+  <p>External Link: <a href="#" id="externalLink">Visit External Site</a></p>
+</div>
+
+<script>
+  // Function to hide default content and show external content
+  function showExternalContent() {
+    document.getElementById('defaultContent').classList.add('hidden');
+    document.getElementById('externalContent').classList.remove('hidden');
+  }
+
+  // Event listener for triggering the function
+  document.getElementById('externalLink').addEventListener('click', function(event) {
+    // Perform any necessary actions when the external link is clicked
+    alert('You clicked the external link!');
+  });
+</script>
+
+</body>
+</html>
